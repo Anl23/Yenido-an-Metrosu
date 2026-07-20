@@ -24,7 +24,8 @@ color:white;
 }
 
 
-/* Yan Menü */
+
+/* Menü */
 
 .sidebar{
 
@@ -43,7 +44,6 @@ border-right:3px solid #ff4a57;
 }
 
 
-
 .logo{
 
 font-size:24px;
@@ -55,7 +55,6 @@ color:#ff4a57;
 margin-bottom:35px;
 
 }
-
 
 
 .menu a{
@@ -73,7 +72,6 @@ margin-bottom:10px;
 border-radius:8px;
 
 }
-
 
 
 .menu a:hover{
@@ -94,7 +92,6 @@ margin-left:260px;
 padding:40px;
 
 }
-
 
 
 
@@ -122,7 +119,8 @@ margin-bottom:10px;
 
 
 
-/* İstasyon sistemi */
+
+/* İstasyon kutuları */
 
 
 .station-box{
@@ -200,6 +198,9 @@ border-left-color:#ff4a57;
 
 
 
+/* Fotoğraflar */
+
+
 .photos{
 
 display:none;
@@ -212,17 +213,29 @@ margin-top:20px;
 
 .photos img{
 
-width:260px;
+width:220px;
 
-height:180px;
+height:150px;
 
 object-fit:cover;
 
 border-radius:12px;
 
-margin:10px;
+margin:8px;
+
+cursor:pointer;
+
+transition:.3s;
 
 }
+
+
+.photos img:hover{
+
+transform:scale(1.05);
+
+}
+
 
 
 
@@ -249,15 +262,13 @@ margin-left:0;
 }
 
 
-</style>
 
+</style>
 
 </head>
 
 
-
 <body>
-
 
 
 
@@ -275,34 +286,17 @@ M13 Arşivi
 <div class="menu">
 
 
-<a href="index.html">
-Ana Sayfa
-</a>
+<a href="index.html">Ana Sayfa</a>
 
+<a href="guzergah.html">Güzergâh</a>
 
-<a href="guzergah.html">
-Güzergâh
-</a>
+<a href="istasyonlar.html">İstasyonlar</a>
 
+<a href="insaat.html">Saha Fotoğrafları Arşivi</a>
 
-<a href="istasyonlar.html">
-İstasyonlar
-</a>
+<a href="takvim.html">Proje Takvimi</a>
 
-
-<a href="insaat.html">
-Saha Fotoğrafları Arşivi
-</a>
-
-
-<a href="takvim.html">
-Proje Takvimi
-</a>
-
-
-<a href="belgeler.html">
-Belgeler
-</a>
+<a href="belgeler.html">Belgeler</a>
 
 
 </div>
@@ -320,16 +314,13 @@ Belgeler
 
 <div class="hero">
 
-
 <h1>
 Saha Fotoğrafları Arşivi
 </h1>
 
-
 <p>
 M13 Yenidoğan - Söğütlüçeşme Metro Hattı istasyon bazlı inşaat fotoğrafları.
 </p>
-
 
 </div>
 
@@ -352,31 +343,34 @@ M13 Yenidoğan - Söğütlüçeşme Metro Hattı istasyon bazlı inşaat fotoğr
 <div class="station-list" id="stations">
 
 
+
+
+
 <div class="station-button" onclick="showPhotos('emek')">
-
 Emek
-
 </div>
-
 
 
 <div id="emek" class="photos">
 
+<img src="images/emek1.jpeg">
+<img src="images/emek2.jpeg">
+<img src="images/emek3.jpeg">
+<img src="images/emek4.jpeg">
+<img src="images/emek5.jpeg">
+<img src="images/emek6.jpeg">
+<img src="images/emek7.jpeg">
 
-<img src="images/foto1.jpeg">
-
-<img src="images/foto2.jpeg">
-
-<img src="images/foto3.jpeg">
-
-<img src="images/foto4.jpeg">
-
-<img src="images/foto5.jpeg">
-
-<img src="images/foto6.jpeg">
-
-<img src="images/foto7.jpeg">
-
+<img src="images/emek8.jpeg">
+<img src="images/emek9.jpeg">
+<img src="images/emek10.jpeg">
+<img src="images/emek11.jpeg">
+<img src="images/emek12.jpeg">
+<img src="images/emek13.jpeg">
+<img src="images/emek14.jpeg">
+<img src="images/emek15.jpeg">
+<img src="images/emek16.jpeg">
+<img src="images/emek17.jpeg">
 
 </div>
 
@@ -385,90 +379,210 @@ Emek
 
 
 <div class="station-button" onclick="showPhotos('sarigazi')">
-
 Sarıgazi
-
 </div>
 
 
 <div id="sarigazi" class="photos">
 
-<p>
-Henüz fotoğraf eklenmedi.
-</p>
+<img src="images/sarigazi1.jpeg">
+<img src="images/sarigazi2.jpeg">
+<img src="images/sarigazi3.jpeg">
+<img src="images/sarigazi4.jpeg">
+<img src="images/sarigazi5.jpeg">
 
 </div>
-
 
 
 
 
 
 <div class="station-button" onclick="showPhotos('aydinlar')">
-
 Aydınlar
-
 </div>
 
 
 <div id="aydinlar" class="photos">
 
-<p>
-Henüz fotoğraf eklenmedi.
-</p>
+<img src="images/aydinlar1.jpeg">
+<img src="images/aydinlar2.jpeg">
+<img src="images/aydinlar3.jpeg">
+<img src="images/aydinlar4.jpeg">
+<img src="images/aydinlar5.jpeg">
 
 </div>
-
 
 
 
 
 
 <div class="station-button" onclick="showPhotos('cumhuriyet')">
-
 Cumhuriyet
-
 </div>
 
 
 <div id="cumhuriyet" class="photos">
 
-<p>
-Henüz fotoğraf eklenmedi.
-</p>
+<img src="images/cumhuriyet1.jpeg">
+<img src="images/cumhuriyet2.jpeg">
+<img src="images/cumhuriyet3.jpeg">
+<img src="images/cumhuriyet4.jpeg">
+<img src="images/cumhuriyet5.jpeg">
 
 </div>
-
 
 
 
 
 
 <div class="station-button" onclick="showPhotos('yenidogan')">
-
 Yenidoğan
-
 </div>
 
 
 <div id="yenidogan" class="photos">
 
-<p>
-Henüz fotoğraf eklenmedi.
-</p>
+<img src="images/yenidogan1.jpeg">
+<img src="images/yenidogan2.jpeg">
+<img src="images/yenidogan3.jpeg">
+<img src="images/yenidogan4.jpeg">
+<img src="images/yenidogan5.jpeg">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<!-- Fotoğraf büyütme ekranı -->
+
+<div id="lightbox" class="lightbox">
+
+
+<span class="close" onclick="closeLightbox()">
+×
+</span>
+
+
+<span class="prev" onclick="changePhoto(-1)">
+❮
+</span>
+
+
+
+<img id="lightbox-img">
+
+
+
+<span class="next" onclick="changePhoto(1)">
+❯
+</span>
+
+
 
 </div>
 
 
 
-</div>
+
+<style>
 
 
-</div>
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+z-index:999;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.9);
+
+align-items:center;
+
+justify-content:center;
+
+}
 
 
 
-</div>
+.lightbox img{
+
+max-width:80%;
+
+max-height:80%;
+
+border-radius:15px;
+
+}
+
+
+
+.close{
+
+position:absolute;
+
+top:30px;
+
+right:50px;
+
+font-size:45px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+
+
+.prev,.next{
+
+position:absolute;
+
+top:50%;
+
+font-size:50px;
+
+cursor:pointer;
+
+color:white;
+
+padding:20px;
+
+}
+
+
+
+.prev{
+
+left:30px;
+
+}
+
+
+
+.next{
+
+right:30px;
+
+}
+
+
+</style>
 
 
 
@@ -477,9 +591,14 @@ Henüz fotoğraf eklenmedi.
 <script>
 
 
+// İstasyon aç kapa
+
+
 function openStations(){
 
+
 let menu=document.getElementById("stations");
+
 
 
 if(menu.style.display==="block"){
@@ -494,25 +613,21 @@ menu.style.display="block";
 
 }
 
+
 }
 
+
+
+
+
+// Fotoğraf alanlarını açma
 
 
 function showPhotos(id){
 
-let selected=document.getElementById(id);
-
-
-if(selected.style.display==="block"){
-
-selected.style.display="none";
-
-return;
-
-}
-
 
 let photos=document.querySelectorAll(".photos");
+
 
 
 photos.forEach(function(photo){
@@ -522,14 +637,155 @@ photo.style.display="none";
 });
 
 
-selected.style.display="block";
+
+document.getElementById(id).style.display="block";
 
 
 }
 
 
-</script>
 
+
+
+
+
+// Galeri sistemi
+
+
+let currentImages=[];
+
+let currentIndex=0;
+
+
+
+
+let allImages=document.querySelectorAll(".photos img");
+
+
+
+allImages.forEach(function(img){
+
+
+img.onclick=function(){
+
+
+currentImages=[];
+
+
+let parent=img.parentElement;
+
+
+let images=parent.querySelectorAll("img");
+
+
+
+images.forEach(function(image){
+
+currentImages.push(image.src);
+
+});
+
+
+
+currentIndex=currentImages.indexOf(img.src);
+
+
+
+openLightbox();
+
+
+}
+
+
+
+});
+
+
+
+
+
+
+function openLightbox(){
+
+
+document.getElementById("lightbox").style.display="flex";
+
+
+document.getElementById("lightbox-img").src=currentImages[currentIndex];
+
+
+}
+
+
+
+
+
+
+function closeLightbox(){
+
+
+document.getElementById("lightbox").style.display="none";
+
+
+}
+
+
+
+
+
+
+
+function changePhoto(direction){
+
+
+currentIndex+=direction;
+
+
+
+if(currentIndex<0){
+
+currentIndex=currentImages.length-1;
+
+}
+
+
+
+if(currentIndex>=currentImages.length){
+
+currentIndex=0;
+
+}
+
+
+
+document.getElementById("lightbox-img").src=currentImages[currentIndex];
+
+
+
+}
+
+
+
+
+// ESC ile kapatma
+
+
+document.addEventListener("keydown",function(e){
+
+
+if(e.key==="Escape"){
+
+closeLightbox();
+
+}
+
+
+
+});
+
+
+
+</script>
 
 
 
