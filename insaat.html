@@ -17,59 +17,144 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+
 body{
 background:#121212;
 color:white;
 }
 
+
+/* Menü */
+
 .sidebar{
+
 position:fixed;
 left:0;
 top:0;
 width:260px;
 height:100vh;
+
 background:#1e1e1e;
+
 padding:25px;
+
 border-right:3px solid #ff4a57;
+
 }
+
+
 
 .logo{
+
 font-size:24px;
+
 font-weight:bold;
+
 color:#ff4a57;
+
 margin-bottom:35px;
+
 }
+
+
 
 .menu a{
+
 display:block;
+
 color:white;
+
 text-decoration:none;
+
 padding:15px;
+
 margin-bottom:10px;
+
 border-radius:8px;
+
 transition:.3s;
+
 }
+
+
 
 .menu a:hover{
+
 background:#ff4a57;
+
 }
+
+
+
+
+/* Açılır menü */
+
+
+.station-list{
+
+display:none;
+
+margin-left:15px;
+
+border-left:2px solid #555;
+
+padding-left:10px;
+
+}
+
+
+
+.station-list a{
+
+font-size:14px;
+
+padding:10px;
+
+}
+
+
+
+
+/* İçerik */
+
 
 .content{
+
 margin-left:260px;
+
 padding:40px;
+
 }
+
+
 
 .hero{
+
 background:linear-gradient(135deg,#ff4a57,#8f1d2c);
+
 padding:45px;
+
 border-radius:15px;
+
 margin-bottom:30px;
+
 }
 
+
+
 .hero h1{
+
 font-size:36px;
+
 margin-bottom:10px;
+
 }
+
+
+
+
+/* Galeri */
+
 
 .gallery{
 
@@ -83,6 +168,9 @@ margin-top:30px;
 
 }
 
+
+
+
 .photo{
 
 background:#1e1e1e;
@@ -93,15 +181,9 @@ overflow:hidden;
 
 border-left:5px solid #ff4a57;
 
-transition:.3s;
-
 }
 
-.photo:hover{
 
-transform:translateY(-5px);
-
-}
 
 .photo img{
 
@@ -111,19 +193,9 @@ height:220px;
 
 object-fit:cover;
 
-display:block;
-
-cursor:pointer;
-
-transition:.3s;
-
 }
 
-.photo img:hover{
 
-transform:scale(1.05);
-
-}
 
 .photo p{
 
@@ -131,19 +203,24 @@ padding:15px;
 
 color:#ddd;
 
-font-size:15px;
-
 }
 
+
+
+
 @media(max-width:800px){
+
 
 .sidebar{
 
 position:relative;
+
 width:100%;
+
 height:auto;
 
 }
+
 
 .content{
 
@@ -151,120 +228,178 @@ margin-left:0;
 
 }
 
+
 }
 
 </style>
 
+
 </head>
+
 
 <body>
 
+
+
 <div class="sidebar">
 
+
 <div class="logo">
+
 M13 Arşivi
+
 </div>
+
+
 
 <div class="menu">
 
-<a href="index.html">Ana Sayfa</a>
 
-<a href="guzergah.html">Güzergâh</a>
+<a href="index.html">
+Ana Sayfa
+</a>
 
-<a href="istasyonlar.html">İstasyonlar</a>
 
-<a href="insaat.html">Saha Fotoğrafları Arşivi</a>
+<a href="guzergah.html">
+Güzergâh
+</a>
 
-<a href="takvim.html">Proje Takvimi</a>
 
-<a href="belgeler.html">Belgeler</a>
+<a href="istasyonlar.html">
+İstasyonlar
+</a>
+
+
+
+
+<a onclick="toggleMenu()">
+
+Saha Fotoğrafları Arşivi ▾
+
+</a>
+
+
+
+<div class="station-list" id="station-list">
+
+
+<a href="emek.html">
+Emek
+</a>
+
+
+<a href="#">
+Sarıgazi
+</a>
+
+
+<a href="#">
+Aydınlar
+</a>
+
+
+<a href="#">
+Cumhuriyet
+</a>
+
+
+<a href="#">
+Yenidoğan
+</a>
+
+
 
 </div>
 
+
+
+
+
+<a href="takvim.html">
+Proje Takvimi
+</a>
+
+
+<a href="belgeler.html">
+Belgeler
+</a>
+
+
+
 </div>
+
+
+</div>
+
+
+
+
+
+
 
 <div class="content">
 
+
+
 <div class="hero">
+
 
 <h1>
 Saha Fotoğrafları Arşivi
 </h1>
 
+
 <p>
-M13 Yenidoğan - Söğütlüçeşme Metro Hattı inşaat sürecine ait tarih sıralı fotoğraf arşivi.
+M13 Yenidoğan - Söğütlüçeşme Metro Hattı inşaat sürecine ait istasyon bazlı fotoğraf arşivi.
 </p>
+
 
 </div>
 
-<div class="gallery">
 
-<div class="photo">
 
-<img src="images/foto1.jpeg" alt="Fotoğraf">
+<h2>
+Bir istasyon seçerek saha fotoğraflarına ulaşabilirsiniz.
+</h2>
 
-<p>
-14 Temmuz 2026 • Emek İstasyonu
-</p>
 
-</div>
 
-<div class="photo">
-
-<img src="images/foto2.jpeg" alt="Fotoğraf">
-
-<p>
- 16 Temmuz 2026 • Emek İstasyonu
-</p>
 
 </div>
 
-<div class="photo">
 
-<img src="images/foto3.jpeg" alt="Fotoğraf">
 
-<p>
-17 Temmuz 2026 • Emek İstasyonu
-</p>
 
-</div>
 
-<div class="photo">
+<script>
 
-<img src="images/foto4.jpeg" alt="Fotoğraf">
 
-<p>
-Nisan 2026 • Emek İstasyonu
-</p>
+function toggleMenu(){
 
-</div>
 
-<div class="photo">
+let menu=document.getElementById("station-list");
 
-<img src="images/foto5.jpeg" alt="Fotoğraf">
 
-<p>
-Nisan 2026 • Emek İstasyonu
-</p>
+if(menu.style.display==="block"){
 
- </div>
+menu.style.display="none";
 
-<div class="photo">
+}
 
-<img src="images/foto6.jpeg" alt="Fotoğraf">
+else{
 
-<p>
-Nisan 2026 • Emek İstasyonu
-</p>
+menu.style.display="block";
 
-</div>
+}
 
-<div class="photo">
 
-<img src="images/foto7.jpeg" alt="Fotoğraf">
+}
 
-<p>
-Nisan 2026 • Emek İstasyonu
-</p>
 
-</div>
+</script>
+
+
+
+</body>
+
+</html>
