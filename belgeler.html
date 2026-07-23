@@ -20,8 +20,28 @@ body{background:#121212;color:#fff}
 .card{background:#1e1e1e;border-radius:14px;overflow:hidden}
 .card img{width:100%;height:220px;object-fit:cover;cursor:pointer}
 .card p{padding:14px;color:#9f9f9f;line-height:1.5}
-.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);align-items:center;justify-content:center;z-index:999}
-.lightbox img{max-width:85%;max-height:85%}
+.lightbox{
+
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.92);
+align-items:center;
+justify-content:center;
+z-index:999;
+overflow:hidden;
+
+}
+
+.lightbox img{
+
+max-width:85%;
+max-height:85%;
+cursor:grab;
+transform-origin:center center;
+transition:transform .05s;
+
+}
 .close,.prev,.next{position:absolute;color:#fff;font-size:42px;cursor:pointer}
 .close{top:20px;right:35px}.prev{left:25px;top:50%}.next{right:25px;top:50%}
 </style></head>
@@ -47,10 +67,88 @@ body{background:#121212;color:#fff}
 </div></div>
 <div class="lightbox" id="lb"><span class="close" onclick="closeLB()">&times;</span><span class="prev" onclick="chg(-1)">❮</span><img id="lbimg"><span class="next" onclick="chg(1)">❯</span></div>
 <script>
-const imgs=[...Array(10)].map((_,i)=>`images/dokuman${i+1}.jpeg`);let idx=0;
-function openLB(i){idx=i;lb.style.display='flex';lbimg.src=imgs[idx]}
-function closeLB(){lb.style.display='none'}
-function chg(d){idx=(idx+d+imgs.length)%imgs.length;lbimg.src=imgs[idx]}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()})
+const imgs=[...Array(10)].map((_,i)=>`images/dokuman${i+1}.jpeg`);
+
+let idx=0;
+
+let scale=1;
+
+let originX=50;
+
+let originY=50;
+
+const image=document.getElementById("lbimg");
+
+function openLB(i){
+
+    idx=i;
+
+    scale=1;
+
+    image.style.transform="scale(1)";
+
+    image.style.transformOrigin="center center";
+
+    lb.style.display="flex";
+
+    image.src=imgs[idx];
+
+}
+
+function closeLB(){
+
+    lb.style.display="none";
+
+}
+
+function chg(d){
+
+    idx=(idx+d+imgs.length)%imgs.length;
+
+    scale=1;
+
+    image.style.transform="scale(1)";
+
+    image.style.transformOrigin="center center";
+
+    image.src=imgs[idx];
+
+}
+
+image.addEventListener("wheel",function(e){
+
+    e.preventDefault();
+
+    const rect=image.getBoundingClientRect();
+
+    originX=((e.clientX-rect.left)/rect.width)*100;
+
+    originY=((e.clientY-rect.top)/rect.height)*100;
+
+    image.style.transformOrigin=originX+"% "+originY+"%";
+
+    if(e.deltaY<0){
+
+        scale+=0.2;
+
+    }else{
+
+        scale-=0.2;
+
+    }
+
+    if(scale<1) scale=1;
+
+    if(scale>6) scale=6;
+
+    image.style.transform="scale("+scale+")";
+
+});
+
+document.addEventListener("keydown",e=>{
+
+    if(e.key==="Escape") closeLB();
+
+});
 </script>
 </body></html>
